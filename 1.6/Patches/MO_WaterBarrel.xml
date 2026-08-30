@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Das Wasserfass loescht Feuer, wenn ein Kolonist es umstoesst. Aufgebaut wie
+	     der Schaumwerfer, aber ohne dessen CompProperties_ProximityFuse: es geht
+	     nur von Hand los, nicht von selbst. Danach ist das Fass hin.
+
+	     Keine Lunte: CompProperties_Usable laesst den Pawn ohnehin useDuration
+	     lang am Fass stehen, danach soll es sofort auslaufen statt erst, wenn er
+	     schon wieder weg ist. CompExplosive verlangt tickerType Normal, das Fass
+	     erbt None. -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_BarrelWater"]/comps[not(li[@Class="CompProperties_Explosive"])]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_BarrelWater"]/comps</xpath>
+					<value>
+						<li Class="CompProperties_Explosive">
+							<explosiveRadius>3.9</explosiveRadius>
+							<explosiveDamageType>MOF_Douse</explosiveDamageType>
+							<drawWick>false</drawWick>
+							<startWickHitPointsPercent>-1</startWickHitPointsPercent>
+							<wickTicks>1~1</wickTicks>
+							<postExplosionSpawnThingDef>MOF_Filth_WaterPuddle</postExplosionSpawnThingDef>
+							<postExplosionSpawnChance>1</postExplosionSpawnChance>
+							<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+							<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+						</li>
+						<li Class="CompProperties_Usable">
+							<useJob>TriggerObject</useJob>
+							<useLabel>Trigger {0_label}</useLabel>
+						</li>
+						<li Class="CompProperties_UseEffect">
+							<compClass>CompUseEffect_StartWick</compClass>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_BarrelWater"]/tickerType</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DankPyon_BarrelWater"]/tickerType</xpath>
+						<value>
+							<tickerType>Normal</tickerType>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_BarrelWater"]</xpath>
+						<value>
+							<tickerType>Normal</tickerType>
+						</value>
+					</nomatch>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

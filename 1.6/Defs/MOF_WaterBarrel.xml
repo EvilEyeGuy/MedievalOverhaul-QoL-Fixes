@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Eigene Pfuetze statt Filth_Water, damit die Faerbung nicht global wirkt. -->
+	<ThingDef ParentName="BaseFilth">
+		<defName>MOF_Filth_WaterPuddle</defName>
+		<label>water puddle</label>
+		<statBases>
+			<Beauty>-6</Beauty>
+			<Cleanliness>-4</Cleanliness>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/PoolSoft</texPath>
+			<color>(104, 112, 168, 200)</color>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<filth>
+			<disappearsInDays>0.15~0.3</disappearsInDays>
+			<cleaningWorkToReduceThickness>30</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+			<allowsFire>false</allowsFire>
+			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
+		</filth>
+	</ThingDef>
+
+	<!-- Nass wie nach einem Gang durchs Wasser: SoakingWet ist derselbe Gedanke,
+	     den Terrain_Water ueber traversedThought vergibt. -->
+	<HediffDef>
+		<defName>MOF_Soaked</defName>
+		<label>soaked</label>
+		<description>Drenched in cold water. Uncomfortable, but nothing will catch fire until it dries.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<statFactors>
+					<Flammability>0</Flammability>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>5000</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_ThoughtSetter">
+				<thought>SoakingWet</thought>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Wie Extinguish, aber mit unserem Hediff und blaeulicher Faerbung. -->
+	<DamageDef>
+		<defName>MOF_Douse</defName>
+		<label>douse</label>
+		<workerClass>DamageWorker_Extinguish</workerClass>
+		<canInterruptJobs>false</canInterruptJobs>
+		<makesBlood>false</makesBlood>
+		<defaultDamage>999999</defaultDamage>
+		<hediff>MOF_Soaked</hediff>
+		<explosionColorEdge>(0.42, 0.45, 0.70, 0.35)</explosionColorEdge>
+		<soundExplosion>EmergeFromWater</soundExplosion>
+		<harmsHealth>false</harmsHealth>
+		<combatLogRules>Damage_Extinguish</combatLogRules>
+		<consideredHelpful>true</consideredHelpful>
+	</DamageDef>
+
+</Defs>

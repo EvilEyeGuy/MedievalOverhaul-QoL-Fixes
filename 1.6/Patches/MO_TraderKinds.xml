@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/caravanTraderKinds/li[not(/Defs/TraderKindDef/defName = .)]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/caravanTraderKinds/li[not(/Defs/TraderKindDef/defName = .)]</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/caravanTraderKinds[not(li)]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/caravanTraderKinds</xpath>
+			<value>
+				<caravanTraderKinds>
+					<li>Caravan_Neolithic_BulkGoods</li>
+					<li>Caravan_Neolithic_WarMerchant</li>
+				</caravanTraderKinds>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/visitorTraderKinds/li[not(/Defs/TraderKindDef/defName = .)]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/visitorTraderKinds/li[not(/Defs/TraderKindDef/defName = .)]</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/visitorTraderKinds[not(li)]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/visitorTraderKinds</xpath>
+			<value>
+				<visitorTraderKinds>
+					<li>Visitor_Neolithic_Standard</li>
+				</visitorTraderKinds>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/baseTraderKinds/li[not(/Defs/TraderKindDef/defName = .)]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/baseTraderKinds/li[not(/Defs/TraderKindDef/defName = .)]</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/baseTraderKinds[not(li)]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/baseTraderKinds</xpath>
+			<value>
+				<baseTraderKinds>
+					<li>Base_Neolithic_Standard</li>
+				</baseTraderKinds>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

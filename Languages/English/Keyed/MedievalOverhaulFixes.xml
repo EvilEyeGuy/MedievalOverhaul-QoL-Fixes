@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <MOF_CopySettings>Copy settings</MOF_CopySettings>
+  <MOF_CopySettingsDesc>Copy this building's settings to the clipboard so you can paste them onto another building. Processes, allowed fuels and the fuel level are copied, whichever of them this building has.</MOF_CopySettingsDesc>
+  <MOF_PasteSettings>Paste settings</MOF_PasteSettings>
+  <MOF_PasteSettingsDesc>Overwrite the settings of every selected building with those previously copied to the clipboard. Anything a building does not have is left alone.</MOF_PasteSettingsDesc>
+  <MOF_NothingCopied>Nothing copied yet.</MOF_NothingCopied>
+
+  <MOF_TreeLayer>Where the great trees are drawn</MOF_TreeLayer>
+  <MOF_TreeLayerLow>Behind pawns and items</MOF_TreeLayerLow>
+  <MOF_TreeLayerLowDesc>The great trees still cover ordinary trees, but your colonists and anything lying on the ground stay visible in front of them.</MOF_TreeLayerLowDesc>
+  <MOF_TreeLayerAbovePawns>Over pawns and items</MOF_TreeLayerAbovePawns>
+  <MOF_TreeLayerAbovePawnsDesc>The canopy covers everything on the ground, colonists included. Move the cursor near a tree to see through it.</MOF_TreeLayerAbovePawnsDesc>
+  <MOF_TreeLayerTop>Over everything</MOF_TreeLayerTop>
+  <MOF_TreeLayerTopDesc>Drawn above weather and overlays as well. This is what Medieval Overhaul does for the great oak on its own.</MOF_TreeLayerTopDesc>
+
+</LanguageData>

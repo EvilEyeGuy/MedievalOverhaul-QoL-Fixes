@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <MOF_CopySettings>Einstellungen kopieren</MOF_CopySettings>
+  <MOF_CopySettingsDesc>Kopiert die Einstellungen dieses Gebaeudes in die Zwischenablage, damit du sie auf ein anderes uebertragen kannst. Uebernommen werden Prozesse, erlaubte Brennstoffe und der Fuellstand, soweit dieses Gebaeude sie hat.</MOF_CopySettingsDesc>
+  <MOF_PasteSettings>Einstellungen einfuegen</MOF_PasteSettings>
+  <MOF_PasteSettingsDesc>Ueberschreibt die Einstellungen aller ausgewaehlten Gebaeude mit denen aus der Zwischenablage. Was ein Gebaeude nicht hat, bleibt unangetastet.</MOF_PasteSettingsDesc>
+  <MOF_NothingCopied>Es wurde noch nichts kopiert.</MOF_NothingCopied>
+
+  <MOF_TreeLayer>Wo die Grossbaeume gezeichnet werden</MOF_TreeLayer>
+  <MOF_TreeLayerLow>Hinter Pawns und Gegenstaenden</MOF_TreeLayerLow>
+  <MOF_TreeLayerLowDesc>Die Grossbaeume verdecken weiterhin gewoehnliche Baeume, aber deine Kolonisten und alles am Boden bleiben davor sichtbar.</MOF_TreeLayerLowDesc>
+  <MOF_TreeLayerAbovePawns>Ueber Pawns und Gegenstaenden</MOF_TreeLayerAbovePawns>
+  <MOF_TreeLayerAbovePawnsDesc>Die Krone verdeckt alles am Boden, auch Kolonisten. Mit dem Mauszeiger in die Naehe, dann wird der Baum durchsichtig.</MOF_TreeLayerAbovePawnsDesc>
+  <MOF_TreeLayerTop>Ueber allem</MOF_TreeLayerTop>
+  <MOF_TreeLayerTopDesc>Auch ueber Wetter und Ueberlagerungen. So haelt es Medieval Overhaul von sich aus mit der Grosseiche.</MOF_TreeLayerTopDesc>
+
+</LanguageData>

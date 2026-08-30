@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_IceCellar"]/label[contains(., "с")]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_IceCellar"]/label</xpath>
+			<value>
+				<label>ice cellar</label>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Cellar"]/label[contains(., "с")]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Cellar"]/label</xpath>
+			<value>
+				<label>cellar</label>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

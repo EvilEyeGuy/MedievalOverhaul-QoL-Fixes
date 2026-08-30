@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Medieval Overhaul: QoL &amp; Fixes</name>
+  <author>Evil Eye Guy</author>
+  <packageId>Accurex.MedievalOverhaulFixes</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>A collection of small fixes and quality of life additions for Medieval Overhaul.
+
+This mod patches the problems that are still present, and every patch checks first whether the problem is actually there. On an installation that is already fixed, nothing happens.
+
+It also adds a few conveniences. Copy and paste buttons on processors and fuelled buildings, the way RimWorld has them for storage, so processes, allowed fuels and the fuel level can be carried over instead of being set again on every new building. And the water filled barrel can be tipped over by a colonist to put out fires around it, after which it is gone.
+
+Changes no balance. Load it after Medieval Overhaul.</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>syrchalis.processor.framework</packageId>
+      <displayName>[SYR] Processor Framework</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3210544395</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>DankPyon.Medieval.Overhaul</packageId>
+      <displayName>Medieval Overhaul</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3219596926</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>oskarpotocki.vanillafactionsexpanded.core</li>
+    <li>syrchalis.processor.framework</li>
+    <li>DankPyon.Medieval.Overhaul</li>
+  </loadAfter>
+  <forceLoadAfter>
+    <li>oskarpotocki.vanillafactionsexpanded.core</li>
+    <li>DankPyon.Medieval.Overhaul</li>
+  </forceLoadAfter>
+</ModMetaData>

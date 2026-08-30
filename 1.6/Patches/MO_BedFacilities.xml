@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Betten und Komfortmoebel kennen sich gegenseitig nicht.
+
+	     Vanilla-Betten listen nur EndTable und Dresser, MOs Betten nur die
+	     DankPyon-Moebel. Ein Vanilla-Nachttisch am Strohbett tut also nichts,
+	     ein MO-Nachttisch am Vanilla-Bett ebenso wenig. Beide Seiten geben
+	     denselben Wert (Comfort +0.05), das Zusammenlegen aendert nichts an
+	     der Balance, nur daran welches Moebel wo zaehlt.
+
+	     Der tall end table hat die Facility-Comp mit +0.05, steht aber in
+	     keiner einzigen linkableFacilities-Liste. Sein Bonus konnte nie
+	     greifen. Er kommt hier ueberall mit hinein.
+
+	     Die Royal-Moebel (+0.10) bleiben absichtlich beim Royal Tudor Bed.
+	     Sie auch an einfache Betten zu haengen waere ein Buff, kein Fix. -->
+
+	<!-- Vanilla-Betten (und alles was deren Liste benutzt) nehmen MOs Moebel an. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[li="EndTable"][not(li="DankPyon_RusticEndTable")]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[li="EndTable"][not(li="DankPyon_RusticEndTable")]</xpath>
+			<value>
+				<li>DankPyon_RusticEndTable</li>
+				<li>DankPyon_RusticTallEndTable</li>
+				<li>DankPyon_RusticDresser</li>
+				<li>DankPyon_RusticCloset</li>
+				<li>DankPyon_RusticCloset1x2c</li>
+				<li>DankPyon_RusticChest</li>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- MO-Betten nehmen die Vanilla-Moebel an. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[li="DankPyon_RusticEndTable"][not(li="EndTable")]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[li="DankPyon_RusticEndTable"][not(li="EndTable")]</xpath>
+			<value>
+				<li>EndTable</li>
+				<li>Dresser</li>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- Und den tall end table dort nachtragen, wo er noch fehlt. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[li="DankPyon_RusticEndTable"][not(li="DankPyon_RusticTallEndTable")]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[li="DankPyon_RusticEndTable"][not(li="DankPyon_RusticTallEndTable")]</xpath>
+			<value>
+				<li>DankPyon_RusticTallEndTable</li>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- Das Royal Tudor Bed hat eine eigene Liste und wird von den Operationen
+	     oben nicht erfasst. Es bekommt Vanilla- und Rustic-Moebel dazu, seine
+	     Royal-Moebel bleiben die staerkere Wahl. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[li="DankPyon_RoyalEndTable"][not(li="EndTable")]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[li="DankPyon_RoyalEndTable"][not(li="EndTable")]</xpath>
+			<value>
+				<li>EndTable</li>
+				<li>Dresser</li>
+				<li>DankPyon_RusticEndTable</li>
+				<li>DankPyon_RusticTallEndTable</li>
+				<li>DankPyon_RusticDresser</li>
+				<li>DankPyon_RusticCloset</li>
+				<li>DankPyon_RusticCloset1x2c</li>
+				<li>DankPyon_RusticChest</li>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Die vier Grossbaeume liegen auf drei Ebenen: Skyfaller, Pawn und geerbtes
+	     Building. Gas ist die Ebene, die auch Better Trees waehlt: ueber Pawns und
+	     Gegenstaenden, unter Wetter. Ist Better Trees geladen, macht es Iter, Fir
+	     und Willow schon selbst, dann bleibt nur die Eiche zu korrigieren. -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Better Trees</li>
+		</mods>
+
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="DankPyon_GreatOak"]/altitudeLayer[not(.="Gas")]</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DankPyon_GreatOak"]/altitudeLayer</xpath>
+				<value>
+					<altitudeLayer>Gas</altitudeLayer>
+				</value>
+			</match>
+		</match>
+
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_GreatOak" or defName="DankPyon_GreatIter" or defName="DankPyon_GreatFir" or defName="DankPyon_GreatWillow"]/altitudeLayer[not(.="Gas")]</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DankPyon_GreatOak" or defName="DankPyon_GreatIter" or defName="DankPyon_GreatFir" or defName="DankPyon_GreatWillow"]/altitudeLayer[not(.="Gas")]</xpath>
+						<value>
+							<altitudeLayer>Gas</altitudeLayer>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_GreatOak" or defName="DankPyon_GreatIter" or defName="DankPyon_GreatFir" or defName="DankPyon_GreatWillow"][not(altitudeLayer)]</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_GreatOak" or defName="DankPyon_GreatIter" or defName="DankPyon_GreatFir" or defName="DankPyon_GreatWillow"][not(altitudeLayer)]</xpath>
+						<value>
+							<altitudeLayer>Gas</altitudeLayer>
+						</value>
+					</match>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+
+</Patch>
