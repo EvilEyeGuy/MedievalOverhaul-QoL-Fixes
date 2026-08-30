@@ -2,7 +2,7 @@
 <ModMetaData>
   <name>Medieval Overhaul: QoL &amp; Fixes</name>
   <author>Evil Eye Guy</author>
-  <packageId>Accurex.MedievalOverhaulFixes</packageId>
+  <packageId>EEG.MedievalOverhaul.QoLFixes</packageId>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
