@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- MOs Lehm-Kopfsteinboden traegt den defName von VFE Architects
+	     Marmorboden. MO laedt spaeter, ueberschreibt die Def damit und der
+	     Marmor-Kopfsteinboden verschwindet ersatzlos aus dem Spiel.
+
+	     Die Nachbardefs derselben Datei heissen DankPyon_VFEArch_*, hier ist
+	     das Praefix schlicht vergessen worden. Wir ziehen den Namen gerade,
+	     danach existieren beide Boeden nebeneinander.
+
+	     Getroffen wird gezielt MOs Fassung, erkennbar an den Lehmkosten, denn
+	     zum Zeitpunkt des Patchens stehen beide Defs unter demselben Namen im
+	     Dokument. Ohne VFE Architect laedt MOs Datei gar nicht erst, dann
+	     greift die Bedingung nicht.
+
+	     Siehe ViralReaction/MedievalOverhaul#39. -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TerrainDef[defName="VFEArch_CobblestoneFloorMarble"][costList/DankPyon_BlocksClay]/defName</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/TerrainDef[defName="VFEArch_CobblestoneFloorMarble"][costList/DankPyon_BlocksClay]/defName</xpath>
+			<value>
+				<defName>DankPyon_VFEArch_CobblestoneFloorClay</defName>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

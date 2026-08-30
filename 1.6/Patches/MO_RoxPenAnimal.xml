@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Der Rox wird vom Pferch-Marker nicht mitgezaehlt, weil ihm roamMtbDays
+	     fehlt. Ueber dieses Feld entscheidet sich, ob ein Tier als Pferchtier
+	     gilt: alle Vanilla-Nutztiere haben es, Haustiere und Wildtiere nicht.
+
+	     MOs eigene grosse Herdentiere tragen durchgehend 2, ebenso Kuh, Muffalo,
+	     Bison, Yak und Pferd. Der Rox ist herdAnimal, packAnimal und zaehmbar,
+	     gehoert also in dieselbe Reihe. 2 haelt ihn dort konsistent.
+
+	     Nebenwirkung, gewollt: er wandert jetzt und braucht einen Pferch. Genau
+	     das war die Meldung. -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Rox"]/race[not(roamMtbDays)]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Rox"]/race</xpath>
+			<value>
+				<roamMtbDays>2</roamMtbDays>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

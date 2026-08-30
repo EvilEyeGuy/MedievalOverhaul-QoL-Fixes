@@ -20,6 +20,12 @@ installation that is already fixed, nothing happens. Changes no balance.
   entries are removed, empty lists get a working default.
 - **Cellar and ice cellar are findable.** Both labels contained a stray Cyrillic
   character, so typing `cellar` in the architect search found nothing.
+- **Rox count at the animal pen marker.** They were missing the field that marks
+  an animal as a pen animal, so the marker ignored them. Note they now roam and
+  need a pen, like every other herd animal.
+- **MO no longer overwrites VFE Architect's marble cobblestone floor.** MO's clay
+  cobblestone floor carried VFEA's defName and, loading later, replaced it, so the
+  marble floor vanished from the game. It is renamed, both floors now exist.
 - **Beds and comfort furniture recognise each other.** Vanilla beds only accepted
   vanilla end tables and dressers, MO beds only MO furniture, so the wrong
   combination gave no comfort bonus at all. Both sides now accept both. The tall
