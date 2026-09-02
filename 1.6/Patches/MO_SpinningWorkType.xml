@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Crafting-Pawns fertigen an der Schneiderbank Kleidung, obwohl sie nicht
+	     fuer Schneidern eingeteilt sind.
+
+	     Die Rezeptseite ist bei MO richtig gebaut: DankPyon_MakeClothBase traegt
+	     requiredGiverWorkType Crafting, die Spinnrezepte haengen also an
+	     Crafting. Damit ein Crafting-Pawn die Schneiderbank ueberhaupt ansieht,
+	     stehen die beiden Baenke zusaetzlich in den fixedBillGiverDefs von
+	     DankPyon_DoBillsSpinningWheel, workType Crafting.
+
+	     WorkGiver_DoBill filtert aber nicht nach Rezept, sondern nach Werkbank.
+	     Er nimmt jede Bank aus dieser Liste und arbeitet dort alle Auftraege ab.
+	     Vanillas Kleidungsrezepte haben kein requiredGiverWorkType, und leer
+	     heisst keine Einschraenkung. Also holen sich Crafting-Pawns auch die
+	     Kleidung. Das Abschalten der Stoffkette hilft nicht, weil der WorkGiver
+	     die Bank weiterhin auflistet.
+
+	     Beide Verweise muessen weg. Bliebe nur der recipeUser stehen, laegen
+	     Spinnauftraege auf der Schneiderbank, die niemand mehr abarbeitet: der
+	     Crafting-Giver erreicht die Bank nicht mehr, und der Tailoring-Giver
+	     ueberspringt sie wegen requiredGiverWorkType Crafting.
+
+	     Danach gilt fuer die Baenke wieder Vanillas DoBillsMakeApparel mit
+	     workType Tailoring, und gesponnen wird am Spinnrad. -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/WorkGiverDef[defName="DankPyon_DoBillsSpinningWheel"]/fixedBillGiverDefs/li[.="HandTailoringBench" or .="ElectricTailoringBench"]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/WorkGiverDef[defName="DankPyon_DoBillsSpinningWheel"]/fixedBillGiverDefs/li[.="HandTailoringBench" or .="ElectricTailoringBench"]</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[@Name="DankPyon_MakeClothBase"]/recipeUsers/li[.="HandTailoringBench" or .="ElectricTailoringBench"]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/RecipeDef[@Name="DankPyon_MakeClothBase"]/recipeUsers/li[.="HandTailoringBench" or .="ElectricTailoringBench"]</xpath>
+		</match>
+	</Operation>
+
+</Patch>
