@@ -15,11 +15,15 @@
   <MOF_TreeLayerTop>Ueber allem</MOF_TreeLayerTop>
   <MOF_TreeLayerTopDesc>Auch ueber Wetter und Ueberlagerungen. So haelt es Medieval Overhaul von sich aus mit der Grosseiche.</MOF_TreeLayerTopDesc>
 
-  <MOF_IndoorDrying>Trockengestelle und Kohlenmeiler funktionieren unter einem Dach</MOF_IndoorDrying>
-  <MOF_IndoorDryingDesc>Medieval Overhaul haelt diese drei gleich doppelt im Freien: es verbietet das Bauen unter einem Dach und stoppt zusaetzlich die Verarbeitung. Diese Einstellung hebt beides auf, damit sie drinnen gebaut werden koennen und dort auch arbeiten. Standardmaessig aus.</MOF_IndoorDryingDesc>
+  <MOF_IndoorDrying>Trockengestelle funktionieren unter einem Dach</MOF_IndoorDrying>
+  <MOF_IndoorDryingDesc>Medieval Overhaul haelt die Trockengestelle gleich doppelt im Freien: es verbietet das Bauen unter einem Dach und stoppt zusaetzlich die Verarbeitung. Diese Einstellung hebt beides auf, damit sie drinnen gebaut werden koennen und dort auch arbeiten. Standardmaessig aus.</MOF_IndoorDryingDesc>
 
   <MOF_TanningLiquor>Gerberlauge je Haut: {0}</MOF_TanningLiquor>
   <MOF_TanningLiquorCounts>Winzige, kleine, mittlere und grosse Haut: {0}.</MOF_TanningLiquorCounts>
   <MOF_TanningLiquorBatch>Eine Charge von {0} reicht fuer {1} grosse Haeute.</MOF_TanningLiquorBatch>
+
+  <MOF_RawhideWarmth>Rawhide-Gestell trocknet mit Waerme statt mit Sonne</MOF_RawhideWarmth>
+  <MOF_RawhideWarmthDesc>Von Haus aus laeuft das Rawhide-Gestell ohne Sonne nur halb so schnell und steht bei Regen oder Schnee ganz still. Diese Einstellung tauscht das gegen eine Abhaengigkeit von der Temperatur, die du durch Bauen und Heizen selbst bestimmst. Das Framework liest die Temperatur am Gebaeude, ein beheizter Raum bleibt also auch im Schneesturm ideal. Durch Kaelte verdirbt nie etwas. Standardmaessig aus.</MOF_RawhideWarmthDesc>
+  <MOF_RawhideWarmthCurve>Volles Tempo ab {0}, faellt auf {2} bei {1} und bleibt darunter dort.</MOF_RawhideWarmthCurve>
 
 </LanguageData>

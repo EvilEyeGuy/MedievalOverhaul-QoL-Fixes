@@ -15,11 +15,15 @@
   <MOF_TreeLayerTop>Over everything</MOF_TreeLayerTop>
   <MOF_TreeLayerTopDesc>Drawn above weather and overlays as well. This is what Medieval Overhaul does for the great oak on its own.</MOF_TreeLayerTopDesc>
 
-  <MOF_IndoorDrying>Drying racks and the charcoal pile work under a roof</MOF_IndoorDrying>
-  <MOF_IndoorDryingDesc>Medieval Overhaul keeps these three outdoors twice over: it refuses the placement under a roof, and it also stops the process from running there. This lifts both, so they can be built indoors and actually work. Off by default.</MOF_IndoorDryingDesc>
+  <MOF_IndoorDrying>Drying racks work under a roof</MOF_IndoorDrying>
+  <MOF_IndoorDryingDesc>Medieval Overhaul keeps the drying racks outdoors twice over: it refuses the placement under a roof, and it also stops the process from running there. This lifts both, so they can be built indoors and actually work. Off by default.</MOF_IndoorDryingDesc>
 
   <MOF_TanningLiquor>Tanning liquor per hide: {0}</MOF_TanningLiquor>
   <MOF_TanningLiquorCounts>Tiny, small, medium and large hide: {0}.</MOF_TanningLiquorCounts>
   <MOF_TanningLiquorBatch>One batch of {0} covers {1} large hides.</MOF_TanningLiquorBatch>
+
+  <MOF_RawhideWarmth>Rawhide rack dries by warmth instead of sunlight</MOF_RawhideWarmth>
+  <MOF_RawhideWarmthDesc>By default the rawhide rack runs at half speed without sunlight and stops entirely in rain or snow. This trades that for a dependency on temperature, which you control by building and heating. The framework reads the temperature at the building, so a heated room stays ideal even in a blizzard. Nothing is ever ruined by cold. Off by default.</MOF_RawhideWarmthDesc>
+  <MOF_RawhideWarmthCurve>Full speed from {0}, dropping to {2} at {1} and staying there below.</MOF_RawhideWarmthCurve>
 
 </LanguageData>
