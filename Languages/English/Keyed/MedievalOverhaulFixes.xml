@@ -15,4 +15,11 @@
   <MOF_TreeLayerTop>Over everything</MOF_TreeLayerTop>
   <MOF_TreeLayerTopDesc>Drawn above weather and overlays as well. This is what Medieval Overhaul does for the great oak on its own.</MOF_TreeLayerTopDesc>
 
+  <MOF_IndoorDrying>Drying racks and the charcoal pile work under a roof</MOF_IndoorDrying>
+  <MOF_IndoorDryingDesc>Medieval Overhaul keeps these three outdoors twice over: it refuses the placement under a roof, and it also stops the process from running there. This lifts both, so they can be built indoors and actually work. Off by default.</MOF_IndoorDryingDesc>
+
+  <MOF_TanningLiquor>Tanning liquor per hide: {0}</MOF_TanningLiquor>
+  <MOF_TanningLiquorCounts>Tiny, small, medium and large hide: {0}.</MOF_TanningLiquorCounts>
+  <MOF_TanningLiquorBatch>One batch of {0} covers {1} large hides.</MOF_TanningLiquorBatch>
+
 </LanguageData>
