@@ -3,7 +3,7 @@
 A collection of small fixes and quality of life additions for
 [Medieval Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3219596926).
 Every patch checks first whether the problem is actually there. On an
-installation that is already fixed, nothing happens. Changes no balance.
+installation that is already fixed, nothing happens.
 
 ## Fixes
 
@@ -34,6 +34,17 @@ installation that is already fixed, nothing happens. Changes no balance.
 - **Rox count at the animal pen marker.** They were missing the field that
   marks an animal as a pen animal, so the marker ignored them. Note they now roam
   and need a pen, like every other herd animal.
+- **Clothing at the tailoring bench is tailoring work again.** Pawns assigned
+  only to crafting were making clothes at the tailoring bench. The spinning recipes
+  had pulled the bench into a crafting work giver, and a work giver takes every
+  bill on a bench, not only the recipe it was meant for. Spinning now happens at
+  the spinning wheel.
+- **Ovens are cut off by walls.** The furnace is drawn taller than the tiles it
+  stands on, so the wall behind it cut off its upper half.
+- **Wall oil lamps vanish behind ovens.** Ovens and lamps sat on the same draw
+  layer, so a wall oil lamp next to a smelter was hidden behind the smelter's
+  frame. Furnace, smelter, blast furnace, kiln, stone oven, rustic hearth and wood
+  burning stove now sit on a layer of their own, above walls and below lamps.
 
 ## Quality of life
 

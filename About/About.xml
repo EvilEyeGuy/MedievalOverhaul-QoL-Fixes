@@ -6,13 +6,13 @@
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <description>A collection of small fixes and quality of life additions for Medieval Overhaul.
+  <description>A set of fixes and a few small additions for Medieval Overhaul.
 
-This mod patches the problems that are still present, and every patch checks first whether the problem is actually there. On an installation that is already fixed, nothing happens.
+Each patch only runs if the problem is still there. When Medieval Overhaul fixes something itself, that patch stops doing anything.
 
-It also adds a few conveniences. Copy and paste buttons on processors and fuelled buildings, the way RimWorld has them for storage, so processes, allowed fuels and the fuel level can be carried over instead of being set again on every new building. And the water filled barrel can be tipped over by a colonist to put out fires around it, after which it is gone.
+It also adds copy and paste buttons to processors and fuelled buildings, the way stockpiles have them, and lets a colonist tip over a water filled barrel to put out fires around it.
 
-Changes no balance. Load it after Medieval Overhaul.</description>
+Load it after Medieval Overhaul.</description>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
