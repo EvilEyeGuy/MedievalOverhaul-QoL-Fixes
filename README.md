@@ -31,9 +31,6 @@ installation that is already fixed, nothing happens.
   floor carried VFE Architect's defName and, loading later, replaced it. The marble
   floor vanished from the game and the clay one existed under no name of its own.
   Renamed, so both floors now exist side by side.
-- **Rox count at the animal pen marker.** They were missing the field that
-  marks an animal as a pen animal, so the marker ignored them. Note they now roam
-  and need a pen, like every other herd animal.
 - **Clothing at the tailoring bench is tailoring work again.** Pawns assigned
   only to crafting were making clothes at the tailoring bench. The spinning recipes
   had pulled the bench into a crafting work giver, and a work giver takes every
