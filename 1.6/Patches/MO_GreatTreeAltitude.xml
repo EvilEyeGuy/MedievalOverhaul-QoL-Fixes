@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<!-- Die vier Grossbaeume liegen auf drei Ebenen: Skyfaller, Pawn und geerbtes
-	     Building. Gas ist die Ebene, die auch Better Trees waehlt: ueber Pawns und
-	     Gegenstaenden, unter Wetter. Ist Better Trees geladen, macht es Iter, Fir
-	     und Willow schon selbst, dann bleibt nur die Eiche zu korrigieren. -->
-
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Better Trees</li>

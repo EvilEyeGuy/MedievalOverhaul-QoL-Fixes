@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<!-- Das Wasserfass loescht Feuer, wenn ein Kolonist es umstoesst. Aufgebaut wie
-	     der Schaumwerfer, aber ohne dessen CompProperties_ProximityFuse: es geht
-	     nur von Hand los, nicht von selbst. Danach ist das Fass hin.
-
-	     Keine Lunte: CompProperties_Usable laesst den Pawn ohnehin useDuration
-	     lang am Fass stehen, danach soll es sofort auslaufen statt erst, wenn er
-	     schon wieder weg ist. CompExplosive verlangt tickerType Normal, das Fass
-	     erbt None. -->
-
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_BarrelWater"]/comps[not(li[@Class="CompProperties_Explosive"])]</xpath>
 		<match Class="PatchOperationSequence">

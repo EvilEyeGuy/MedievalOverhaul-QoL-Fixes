@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!-- Eigene Pfuetze statt Filth_Water, damit die Faerbung nicht global wirkt. -->
 	<ThingDef ParentName="BaseFilth">
 		<defName>MOF_Filth_WaterPuddle</defName>
 		<label>water puddle</label>
@@ -23,8 +22,6 @@
 		</filth>
 	</ThingDef>
 
-	<!-- Nass wie nach einem Gang durchs Wasser: SoakingWet ist derselbe Gedanke,
-	     den Terrain_Water ueber traversedThought vergibt. -->
 	<HediffDef>
 		<defName>MOF_Soaked</defName>
 		<label>soaked</label>
@@ -47,7 +44,6 @@
 		</comps>
 	</HediffDef>
 
-	<!-- Wie Extinguish, aber mit unserem Hediff und blaeulicher Faerbung. -->
 	<DamageDef>
 		<defName>MOF_Douse</defName>
 		<label>douse</label>
