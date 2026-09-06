@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Smelter" or defName="DankPyon_BlastFurnace" or defName="DankPyon_Kiln" or defName="DankPyon_StoneOvenLarge" or defName="DankPyon_RusticHearth" or defName="DankPyon_WoodBurningStove"]/altitudeLayer[.="BuildingOnTop"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Smelter" or defName="DankPyon_BlastFurnace" or defName="DankPyon_Kiln" or defName="DankPyon_StoneOvenLarge" or defName="DankPyon_RusticHearth" or defName="DankPyon_WoodBurningStove"]/altitudeLayer</xpath>
+			<value>
+				<altitudeLayer>BuildingBelowTop</altitudeLayer>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Furnace"]/altitudeLayer</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Furnace"]/altitudeLayer</xpath>
+			<value>
+				<altitudeLayer>BuildingBelowTop</altitudeLayer>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Furnace"]</xpath>
+			<value>
+				<altitudeLayer>BuildingBelowTop</altitudeLayer>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>
