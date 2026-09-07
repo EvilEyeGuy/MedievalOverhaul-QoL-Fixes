@@ -26,4 +26,7 @@
   <MOF_RawhideWarmthDesc>Von Haus aus laeuft das Rawhide-Gestell ohne Sonne nur halb so schnell und steht bei Regen oder Schnee ganz still. Diese Einstellung tauscht das gegen eine Abhaengigkeit von der Temperatur, die du durch Bauen und Heizen selbst bestimmst. Das Framework liest die Temperatur am Gebaeude, ein beheizter Raum bleibt also auch im Schneesturm ideal. Durch Kaelte verdirbt nie etwas. Standardmaessig aus.</MOF_RawhideWarmthDesc>
   <MOF_RawhideWarmthCurve>Volles Tempo ab {0}, faellt auf {2} bei {1} und bleibt darunter dort.</MOF_RawhideWarmthCurve>
 
+  <MOF_SpearReach>Stangenwaffen reichen ein Feld weiter</MOF_SpearReach>
+  <MOF_SpearReachDesc>Speere, Piken und Hellebarden treffen ein Ziel zwei Felder weit, ein Pawn kann also ueber einen Verbuendeten hinweg angreifen. Das Ziel muss in Sichtlinie stehen. Medieval Overhaul hatte das einmal und hat die Werte in seinen Dateien stehen lassen. Es gilt fuer beide Seiten, Angreifer mit Stangenwaffen eingeschlossen. Standardmaessig aus.</MOF_SpearReachDesc>
+
 </LanguageData>

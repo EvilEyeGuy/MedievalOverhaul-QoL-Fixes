@@ -26,4 +26,7 @@
   <MOF_RawhideWarmthDesc>By default the rawhide rack runs at half speed without sunlight and stops entirely in rain or snow. This trades that for a dependency on temperature, which you control by building and heating. The framework reads the temperature at the building, so a heated room stays ideal even in a blizzard. Nothing is ever ruined by cold. Off by default.</MOF_RawhideWarmthDesc>
   <MOF_RawhideWarmthCurve>Full speed from {0}, dropping to {2} at {1} and staying there below.</MOF_RawhideWarmthCurve>
 
+  <MOF_SpearReach>Polearms reach one tile further</MOF_SpearReach>
+  <MOF_SpearReachDesc>Spears, pikes and halberds can strike a target two tiles away, so a pawn can attack over an ally standing in front. The target must be in line of sight. Medieval Overhaul had this once and left the values in its files. Both sides get it, raiders with polearms included. Off by default.</MOF_SpearReachDesc>
+
 </LanguageData>

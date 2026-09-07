@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_Warfork" or defName="DankPyon_MeleeWeapon_Spetum" or defName="DankPyon_MeleeWeapon_HookedBlade" or defName="DankPyon_MeleeWeapon_Billhook" or defName="DankPyon_MeleeWeapon_Pike" or defName="DankPyon_MeleeWeapon_PikeAmboise" or defName="DankPyon_MeleeWeapon_PikeSoren" or defName="DankPyon_MeleeWeapon_PikeOswin" or defName="DankPyon_MeleeWeapon_PikeHesse" or defName="DankPyon_MeleeWeapon_Swordlance" or defName="DankPyon_MeleeWeapon_Halberd" or defName="DankPyon_MeleeWeapon_NamedHalberd"][not(modExtensions/li[@Class="MedievalOverhaulFixes.ReachExtension"])]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_Warfork" or defName="DankPyon_MeleeWeapon_Spetum" or defName="DankPyon_MeleeWeapon_HookedBlade" or defName="DankPyon_MeleeWeapon_Billhook" or defName="DankPyon_MeleeWeapon_Pike" or defName="DankPyon_MeleeWeapon_PikeAmboise" or defName="DankPyon_MeleeWeapon_PikeSoren" or defName="DankPyon_MeleeWeapon_PikeOswin" or defName="DankPyon_MeleeWeapon_PikeHesse" or defName="DankPyon_MeleeWeapon_Swordlance" or defName="DankPyon_MeleeWeapon_Halberd" or defName="DankPyon_MeleeWeapon_NamedHalberd"][not(modExtensions)]</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_Warfork" or defName="DankPyon_MeleeWeapon_Spetum" or defName="DankPyon_MeleeWeapon_HookedBlade" or defName="DankPyon_MeleeWeapon_Billhook" or defName="DankPyon_MeleeWeapon_Pike" or defName="DankPyon_MeleeWeapon_PikeAmboise" or defName="DankPyon_MeleeWeapon_PikeSoren" or defName="DankPyon_MeleeWeapon_PikeOswin" or defName="DankPyon_MeleeWeapon_PikeHesse" or defName="DankPyon_MeleeWeapon_Swordlance" or defName="DankPyon_MeleeWeapon_Halberd" or defName="DankPyon_MeleeWeapon_NamedHalberd"][not(modExtensions)]</xpath>
+						<value>
+							<modExtensions />
+						</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_Warfork" or defName="DankPyon_MeleeWeapon_Spetum" or defName="DankPyon_MeleeWeapon_HookedBlade" or defName="DankPyon_MeleeWeapon_Billhook" or defName="DankPyon_MeleeWeapon_Pike" or defName="DankPyon_MeleeWeapon_PikeAmboise" or defName="DankPyon_MeleeWeapon_PikeSoren" or defName="DankPyon_MeleeWeapon_PikeOswin" or defName="DankPyon_MeleeWeapon_PikeHesse" or defName="DankPyon_MeleeWeapon_Swordlance" or defName="DankPyon_MeleeWeapon_Halberd" or defName="DankPyon_MeleeWeapon_NamedHalberd"]/modExtensions</xpath>
+					<value>
+						<li Class="MedievalOverhaulFixes.ReachExtension">
+							<reach>2</reach>
+						</li>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
