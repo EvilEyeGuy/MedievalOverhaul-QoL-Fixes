@@ -29,4 +29,9 @@
   <MOF_SpearReach>Polearms reach one tile further</MOF_SpearReach>
   <MOF_SpearReachDesc>Spears, pikes and halberds can strike a target two tiles away, so a pawn can attack over an ally standing in front. The target must be in line of sight. Medieval Overhaul had this once and left the values in its files. Both sides get it, raiders with polearms included. Off by default.</MOF_SpearReachDesc>
 
+  <MOF_LoadingCart>Loading cart works as a trade beacon</MOF_LoadingCart>
+  <MOF_LoadingCartDesc>Adds a loading cart. Traders only take goods stored near a beacon, and the vanilla beacon needs power, which no medieval colony has. Some events from other mods, such as the extortion demand from More Faction Interaction, cannot be paid without one. Medieval Overhaul had a cart for this once and removed it, because a beacon without power is silently ignored by the game. On by default.</MOF_LoadingCartDesc>
+  <MOF_CartNextLook>Next wagon</MOF_CartNextLook>
+  <MOF_CartNextLookDesc>Show the next wagon. Rotating the cart does the same.</MOF_CartNextLookDesc>
+
 </LanguageData>

@@ -29,4 +29,9 @@
   <MOF_SpearReach>Stangenwaffen reichen ein Feld weiter</MOF_SpearReach>
   <MOF_SpearReachDesc>Speere, Piken und Hellebarden treffen ein Ziel zwei Felder weit, ein Pawn kann also ueber einen Verbuendeten hinweg angreifen. Das Ziel muss in Sichtlinie stehen. Medieval Overhaul hatte das einmal und hat die Werte in seinen Dateien stehen lassen. Es gilt fuer beide Seiten, Angreifer mit Stangenwaffen eingeschlossen. Standardmaessig aus.</MOF_SpearReachDesc>
 
+  <MOF_LoadingCart>Lastenwagen wirkt als Handelsfunkfeuer</MOF_LoadingCart>
+  <MOF_LoadingCartDesc>Fuegt einen Lastenwagen hinzu. Haendler nehmen nur Waren an, die bei einem Funkfeuer lagern, und das Vanilla-Funkfeuer braucht Strom, den eine mittelalterliche Kolonie nicht hat. Manche Ereignisse aus anderen Mods, etwa die Erpressung aus More Faction Interaction, lassen sich ohne eines nicht bezahlen. Medieval Overhaul hatte dafuer einmal einen Wagen und hat ihn entfernt, weil ein Funkfeuer ohne Strom vom Spiel stillschweigend uebergangen wird. Standardmaessig an.</MOF_LoadingCartDesc>
+  <MOF_CartNextLook>Naechster Wagen</MOF_CartNextLook>
+  <MOF_CartNextLookDesc>Zeigt den naechsten Wagen. Drehen bewirkt dasselbe.</MOF_CartNextLookDesc>
+
 </LanguageData>
