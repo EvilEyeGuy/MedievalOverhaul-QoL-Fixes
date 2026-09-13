@@ -34,4 +34,14 @@
   <MOF_CartNextLook>Naechster Wagen</MOF_CartNextLook>
   <MOF_CartNextLookDesc>Zeigt den naechsten Wagen. Drehen bewirkt dasselbe.</MOF_CartNextLookDesc>
 
+  <MOF_ProcessorHauling>Wird von Kolonisten befuellt und geleert, die fuer Transport eingeteilt sind.</MOF_ProcessorHauling>
+
+  <MOF_Limits>Grenzen festlegen</MOF_Limits>
+  <MOF_LimitsDesc>Kein Nachschub mehr, sobald genug vom Erzeugnis da ist, oder erst anfangen, wenn genug Ausgangsstoff im Lager liegt. Null schaltet die jeweilige Grenze ab. Die Kopierfunktion nimmt beide Werte mit.</MOF_LimitsDesc>
+  <MOF_LimitProduct>Nicht mehr befuellen, sobald die Kolonie so viel vom Erzeugnis hat. Null heisst keine Grenze.</MOF_LimitProduct>
+  <MOF_LimitInput>Erst befuellen, wenn die Kolonie so viel Ausgangsstoff hat. Null heisst kein Mindestbestand.</MOF_LimitInput>
+  <MOF_LimitHint>Gezaehlt wird nur, was in Lagerzonen liegt, genau wie bei einem Auftrag. Was schon drin ist, laeuft weiter, und das Leeren wird nie blockiert.</MOF_LimitHint>
+  <MOF_LimitProductReached>Kein Nachschub: {0} von {1} im Lager</MOF_LimitProductReached>
+  <MOF_LimitInputMissing>Kein Nachschub: nur {0} von {1} Ausgangsstoff im Lager</MOF_LimitInputMissing>
+
 </LanguageData>

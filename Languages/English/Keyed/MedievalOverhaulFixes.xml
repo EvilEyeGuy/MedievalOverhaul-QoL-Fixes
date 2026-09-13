@@ -34,4 +34,14 @@
   <MOF_CartNextLook>Next wagon</MOF_CartNextLook>
   <MOF_CartNextLookDesc>Show the next wagon. Rotating the cart does the same.</MOF_CartNextLookDesc>
 
+  <MOF_ProcessorHauling>Filled and emptied by colonists assigned to Hauling.</MOF_ProcessorHauling>
+
+  <MOF_Limits>Set limits</MOF_Limits>
+  <MOF_LimitsDesc>Stop hauling ingredients here once you have enough of the product, or hold off until enough raw material is in store. Both are off when set to zero. Copy settings carries them to other buildings.</MOF_LimitsDesc>
+  <MOF_LimitProduct>Stop filling once the colony has this much of the product. Zero means no limit.</MOF_LimitProduct>
+  <MOF_LimitInput>Only start filling once the colony has this much raw material. Zero means no minimum.</MOF_LimitInput>
+  <MOF_LimitHint>Only what lies in stockpiles is counted, the same as a bill. Anything already inside keeps processing, and emptying is never blocked.</MOF_LimitHint>
+  <MOF_LimitProductReached>Not filling: {0} of {1} in store</MOF_LimitProductReached>
+  <MOF_LimitInputMissing>Not filling: only {0} of {1} raw material in store</MOF_LimitInputMissing>
+
 </LanguageData>
