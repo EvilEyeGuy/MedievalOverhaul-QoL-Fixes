@@ -21,13 +21,16 @@
   <MOF_TanningLiquor>Tanning liquor per hide: {0}</MOF_TanningLiquor>
   <MOF_TanningLiquorCounts>Tiny, small, medium and large hide: {0}.</MOF_TanningLiquorCounts>
   <MOF_TanningLiquorBatch>One batch of {0} covers {1} large hides.</MOF_TanningLiquorBatch>
+  <MOF_TanningLiquorNone>Tanning needs no liquor.</MOF_TanningLiquorNone>
 
   <MOF_RawhideWarmth>Rawhide rack dries by warmth instead of sunlight</MOF_RawhideWarmth>
   <MOF_RawhideWarmthDesc>By default the rawhide rack runs at half speed without sunlight and stops entirely in rain or snow. This trades that for a dependency on temperature, which you control by building and heating. The framework reads the temperature at the building, so a heated room stays ideal even in a blizzard. Nothing is ever ruined by cold. Off by default.</MOF_RawhideWarmthDesc>
   <MOF_RawhideWarmthCurve>Full speed from {0}, dropping to {2} at {1} and staying there below.</MOF_RawhideWarmthCurve>
 
   <MOF_SpearReach>Polearms reach one tile further</MOF_SpearReach>
-  <MOF_SpearReachDesc>Spears, pikes and halberds can strike a target two tiles away, so a pawn can attack over an ally standing in front. The target must be in line of sight. Medieval Overhaul had this once and left the values in its files. Both sides get it, raiders with polearms included. Off by default.</MOF_SpearReachDesc>
+  <MOF_SpearReachDesc>Spears, pikes and halberds can strike a target two tiles away, so a pawn can attack over an ally standing in front. The target must be in line of sight. Medieval Overhaul had this once and left the values in its files. Both sides get it, raiders with polearms included. Once enabled, the list below sets which weapons have the reach. Off by default.</MOF_SpearReachDesc>
+  <MOF_ReachAll>Select all</MOF_ReachAll>
+  <MOF_ReachNone>Select none</MOF_ReachNone>
 
   <MOF_LoadingCart>Loading cart works as a trade beacon</MOF_LoadingCart>
   <MOF_LoadingCartDesc>Adds a loading cart. Traders only take goods stored near a beacon, and the vanilla beacon needs power, which no medieval colony has. Some events from other mods, such as the extortion demand from More Faction Interaction, cannot be paid without one. Medieval Overhaul had a cart for this once and removed it, because a beacon without power is silently ignored by the game. On by default.</MOF_LoadingCartDesc>

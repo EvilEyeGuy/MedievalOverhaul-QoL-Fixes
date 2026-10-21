@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Trench" or defName="DankPyon_RTrench" or defName="DankPyon_CavalrySpike"][not(drawStyleCategory)]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Trench" or defName="DankPyon_RTrench" or defName="DankPyon_CavalrySpike"][not(drawStyleCategory)]</xpath>
+			<value>
+				<drawStyleCategory>Defenses</drawStyleCategory>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Palisade" or defName="DankPyon_EmbPalisade"][not(drawStyleCategory)]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Palisade" or defName="DankPyon_EmbPalisade"][not(drawStyleCategory)]</xpath>
+			<value>
+				<drawStyleCategory>Walls</drawStyleCategory>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

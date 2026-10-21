@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>yc's Faction Editor</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="DankPyon_ShadowSect"][not(pawnGroupMakers)]</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_ShadowSect"]</xpath>
+				<value>
+					<pawnGroupMakers>
+						<li>
+							<kindDef>MOF_EditorOnly</kindDef>
+							<commonality>0</commonality>
+							<options>
+								<DankPyon_Cultist_Novice>1</DankPyon_Cultist_Novice>
+								<DanyPyon_Cultist_Acolyte_Melee>1</DanyPyon_Cultist_Acolyte_Melee>
+								<DanyPyon_Cultist_Acolyte_Ranged>1</DanyPyon_Cultist_Acolyte_Ranged>
+								<DanyPyon_Cultist_Adept_Melee>1</DanyPyon_Cultist_Adept_Melee>
+								<DanyPyon_Cultist_Adept_Ranged>1</DanyPyon_Cultist_Adept_Ranged>
+								<DanyPyon_Cultist_HighPriest_Melee>1</DanyPyon_Cultist_HighPriest_Melee>
+								<DanyPyon_Cultist_HighPriest_Ranged>1</DanyPyon_Cultist_HighPriest_Ranged>
+							</options>
+						</li>
+					</pawnGroupMakers>
+				</value>
+			</match>
+		</match>
+	</Operation>
+
+</Patch>
