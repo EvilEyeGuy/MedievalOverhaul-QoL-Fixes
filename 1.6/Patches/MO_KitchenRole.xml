@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Grill" or defName="DankPyon_StewPot" or defName="DankPyon_StoneOven" or defName="DankPyon_StoneOvenLarge"][not(building)]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Grill" or defName="DankPyon_StewPot" or defName="DankPyon_StoneOven" or defName="DankPyon_StoneOvenLarge"][not(building)]</xpath>
+			<value>
+				<building />
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Grill" or defName="DankPyon_StewPot" or defName="DankPyon_StoneOven" or defName="DankPyon_StoneOvenLarge"]/building/workTableRoomRole</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Grill" or defName="DankPyon_StewPot" or defName="DankPyon_StoneOven" or defName="DankPyon_StoneOvenLarge"]/building/workTableRoomRole</xpath>
+			<value>
+				<workTableRoomRole>Kitchen</workTableRoomRole>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Grill" or defName="DankPyon_StewPot" or defName="DankPyon_StoneOven" or defName="DankPyon_StoneOvenLarge"]/building[not(workTableRoomRole)]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Grill" or defName="DankPyon_StewPot" or defName="DankPyon_StoneOven" or defName="DankPyon_StoneOvenLarge"]/building[not(workTableRoomRole)]</xpath>
+			<value>
+				<workTableRoomRole>Kitchen</workTableRoomRole>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>
